@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-template-component@3.x.x/dist/aframe-template-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-layout-component@4.x.x/dist/aframe-layout-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@5.x.x/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-proxy-event-component@2.1.0/dist/aframe-proxy-event-component.min.jss"></script>
+    <script>
+        document.querySelector("#antarctica").components.material.data.src.currentTime = 0
+        document.querySelector("#antarctica").components.material.material.map.image.play();
+    </script>
+    <title>Video VR</title>
+  </head>
+  <body>
+    <a-scene>
+  <a-assets>
+    <video id="antarctica" autoplay loop="true" src="./video/car.mp4"> </video>
+  </a-assets>
+  <a-videosphere src="#antarctica"></a-videosphere>
+</a-scene>
+  </body>
+</html>
